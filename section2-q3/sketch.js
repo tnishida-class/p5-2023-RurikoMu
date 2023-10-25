@@ -1,21 +1,25 @@
 // ダーツ
 
 function setup() {
-  const green = color(0, 255, 0);
-  const red = color(255, 0, 0);
-  const black = color(0);
-  const cream = color(242, 212, 147);
+  let green = color(0, 255, 0);
+  let red = color(255, 0, 0);
+  let black = color(0);
+  let cream = color(242, 212, 147);
   createCanvas(400, 400);
   background(255);
   stroke(255);
   strokeWeight(3);
 
-  const cx = width / 2; // 中心は (cx, cy)
-  const cy = height / 2;
-  const maxR = min(width, height); // 大きさは幅と高さのうち小さい方
+  cx = width / 2; // 中心は (cx, cy)
+  cy = height / 2;
+  maxR = min(width, height); // 大きさは幅と高さのうち小さい方
 
   drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);
+  drawArcs(cream, black, maxR * 0.7);
+  drawArcs(green, red, maxR * 0.3);
+  drawArcs(cream, black, maxR * 0.2);
+  drawCircle(green, maxR * 0.1);
   // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
   drawCircle(red, maxR * 0.05);
 }
