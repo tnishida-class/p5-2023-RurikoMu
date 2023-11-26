@@ -98,7 +98,7 @@ function block(bx, by, bw, bh){
   fill(128, 88, 77);
   rect(bx, by, bw, bh);
   
-  //ブロックの下でジャンプ中
+  //ブロックの下でジャンプ
   if(bx - 25 < x &&  x < bx +  bw + 25 &&  by + bh < y  && y < by + bh + 50 && vy < 0){
     y = by + bh + 50;
     vy = -vy;
